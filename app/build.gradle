@@ -14,10 +14,10 @@ android {
     
     signingConfigs {
         debugConf {
-            keyAlias "androiddebugkey"
-            keyPassword "UBAH_PASSWORD_INI"
-            storeFile file("C:\Users\bagong\.android\debug.keystore")
-            storePassword "UBAH_PASSWORD_INI"
+            keyAlias 'androiddebugkey'
+            keyPassword 'UBAH_PASSWORD_INI'
+            storeFile file('debug.keystore')
+            storePassword 'UBAH_PASSWORD_INI'
         }
     }
     
