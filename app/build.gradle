@@ -11,10 +11,24 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    
+    signingConfigs {
+        debugConf {
+            keyAlias "androiddebugkey"
+            keyPassword "UBAH_PASSWORD_INI"
+            storeFile file("C:\Users\bagong\.android\debug.keystore")
+            storePassword "UBAH_PASSWORD_INI"
+        }
+    }
+    
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.debugConf
         }
     }
 }
